@@ -1,44 +1,31 @@
 {{ template "chrome/header.html" . }}
 
+{{ template "chrome/subheader.html" . }}
 
-<div id="wrap">
-    <!-- header -->
-    <div id="header">
-        {{ template "chrome/subheader.html" . }}
+<!-- main -->
+<div id="content">
+    <div style="main_title">
+        {{ .Title }} 
+   </div>
+
+    <section id="main">
+    <div>
+        {{ range first 10 .Data.Pages }}
+        {{ .Render "summary" }}
+        {{ end }}
     </div>
+    </section>
 
-    <!-- main -->
-    <div id="main">
-        <div id="main_title">
-            {{ .Title }} 
-       </div>
+</div>
 
-        <section id="main">
-        <div>
-            {{ range first 10 .Data.Pages }}
-            {{ .Render "summary" }}
-            {{ end }}
-        </div>
-        </section>
+<!-- sidebar -->
+<div id="sidebar">
+    <h2>sidebar</h2>
 
-    </div>
-
-    <!-- sidebar -->
-    <div id="sidebar">
-        <h2>sidebar</h2>
-
-        <!-- nav -->
-        <div id="nav">
-            <ul>
-                <li>one</li>
-                <li>two</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- footer -->
-    <div id="footer">
-    </div>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+    </ul>
 </div>
 
 {{ template "chrome/footer.html" }}

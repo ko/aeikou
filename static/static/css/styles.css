@@ -7,49 +7,24 @@ html {
     float:left;
 }
 
-#wrap {
-    width:1100px;
-    margin: 0 auto;
-    background:#99c;
+#sidebar {
+    position: fixed;
+    height:100%;
+    width:340px;
+    padding:10px;
+    background:#c9c;
 }
 
-#header {
-    background:#ddd;
-    padding: 5px 10px;
-}
-
-#nav {
-    background:#c99;
-    padding: 5px 10px;
+#content {
+    background-color:purple;
+    position:absolute;
+    left:360px;
+    padding:10px;
 }
 
 #main_title {
     font:10em;
     text-align:center;
-}
-
-#main {
-    background:#9c9;
-    float:right;
-    width:700px;
-    padding:10px;
-}
-
-#sidebar {
-    background:#c9c;
-    float:left;
-    width:350px;
-    padding:10px;
-}
-
-#footer {
-    background:#cc9;
-    clear:both;
-    padding:5px 10px;
-}
-
-# html #footer {
-    height: 1px;
 }
 
 h1 {
