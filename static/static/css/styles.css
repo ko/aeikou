@@ -1,5 +1,6 @@
 body,
 html {
+    font-family: 'Droid Sans';
     margin:0;
     padding:0;
     color:#000;
@@ -12,11 +13,11 @@ html {
     height:100%;
     width:340px;
     padding:10px;
-    background:#c9c;
+    background:#efefef;
 }
 
 #content {
-    background-color:purple;
+    background-color:#efefef;
     position:absolute;
     left:360px;
     padding:10px;
@@ -27,6 +28,14 @@ html {
     text-align:center;
 }
 
+#main {
+    padding-top:1em;
+}
+
+#codeblock {
+    font-family: 'Inconsolata';
+}
+
 h1 {
     margin:0;
 }
@@ -35,4 +44,7 @@ h2 {
     margin:0 0 1em;
 }
 
-
+a {
+    text-decoration:none;
+    color:#32CD99;
+}
