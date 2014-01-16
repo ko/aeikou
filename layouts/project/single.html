@@ -22,13 +22,9 @@
     {{ . }}
     {{ end }}
 
-    {{ if .Prev }}
-    {{ .Prev.Title }}
-    {{ end }}
-
-    {{ if .Next }}
-    {{ .Next.Title }}
-    {{ end }}
+    {{ if isset .Params "project_url" }}
+        fork
+    {{ end }} 
 
     </section>
 </div>

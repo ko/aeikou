@@ -24,6 +24,7 @@ html {
     padding-right:10px;
     padding-bottom:10px;
     padding-top:5em;
+    min-width: 700px;
 }
 
 #main_title {
