@@ -18,7 +18,6 @@
     <ul>
         {{ range $data.OrderedIndex }}
             <li>
-                <a href="{{ $data.Plural }}/{{ .Name | urlize }}">{{ .Name }}</a> {{ .Count }}
             </li>
         {{ end }}
     </ul>
