@@ -12,7 +12,9 @@
     <section id="main">
     <div>
         {{ range first 10 .Data.Pages }}
-        {{ .Render "summary" }}
+            {{ if (eq .Section "project")  }}
+                {{ .Render "summary" }}
+            {{ end }}
         {{ end }}
     </div>
     </section>
