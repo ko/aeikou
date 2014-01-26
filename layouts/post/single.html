@@ -10,24 +10,35 @@
     <section id="main">
     {{ .Content }}
 
-    {{ .Date.Format "Mon Jan 2, 2006" }}
+    Written: {{ .Date.Format "Mon Jan 2, 2006" }}
 
+    <br>
     {{ .FuzzyWordCount }} Words
 
-    {{ range .Params.topics }}
-    {{ . }}
+    {{ if .Params.topics }}
+    <br>
+        Topics:
+        {{ range .Params.topics }}
+            {{ . }}
+        {{ end }}
     {{ end }}
 
-    {{ range .Params.tags }}
-    {{ . }}
+    {{ if .Params.tags }}
+        <br>
+        Tags: 
+        {{ range .Params.tags }}
+            {{ . }}
+        {{ end }}
     {{ end }}
+
+    <br><br>
 
     {{ if .Prev }}
-    {{ .Prev.Title }}
+    Prev: {{ .Prev.Title }}
     {{ end }}
 
     {{ if .Next }}
-    {{ .Next.Title }}
+    Next: {{ .Next.Title }}
     {{ end }}
 
     </section>
