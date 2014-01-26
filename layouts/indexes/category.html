@@ -1,15 +1,22 @@
-{{ template "chrome/header.html" }}
-{{ template "chrome/subheader.html" }}
+{{ template "chrome/header.html" . }}
+{{ template "chrome/subheader.html" . }}
 
+<!-- main -->
 <div id="content">
+    <div id="main_title">
+        {{ .Title }} 
+   </div>
+
     <section id="main">
-
-        <h1>{{ .Title }}</h1>
-        {{ range .Data.Pages }}
-        {{ .Render "summary" }}
+    <div>
+        {{ range first 10 .Data.Pages }}
+        {{ .Render "li" }}
+        <br>
         {{ end }}
-
+    </div>
     </section>
+
 </div>
+
 
 {{ template "chrome/footer.html" }}

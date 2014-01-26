@@ -3,7 +3,7 @@
 
 <!-- main -->
 <div id="content">
-    <div style="main_title">
+    <div id="main_title">
         {{ .Title }} 
    </div>
 
@@ -11,6 +11,7 @@
     <div>
         {{ range first 10 .Data.Pages }}
         {{ .Render "li" }}
+        <br>
         {{ end }}
     </div>
     </section>

@@ -3,7 +3,7 @@
 {{ $baseurl := .Site.BaseUrl }}
 
 <div id="content">
-    <div style="main_title">
+    <div id="main_title">
         {{ .Title }}
     </div>
 
@@ -22,9 +22,13 @@
     {{ . }}
     {{ end }}
 
-    {{ if isset .Params "project_url" }}
-        fork
-    {{ end }} 
+    {{ if .Prev }}
+    {{ .Prev.Title }}
+    {{ end }}
+
+    {{ if .Next }}
+    {{ .Next.Title }}
+    {{ end }}
 
     </section>
 </div>
