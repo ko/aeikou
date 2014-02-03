@@ -9,7 +9,7 @@
 
     <section id="main">
     <div>
-        {{ range first 10 .Data.Pages }}
+        {{ range .Data.Pages }}
         {{ .Render "li" }}
         <br>
         {{ end }}
