@@ -8,6 +8,16 @@ html {
     float:left;
 }
 
+.index-meta {
+    font-size:1em;
+    font-style:oblique;
+}
+
+.index-summary {
+    font-size:1em;
+    line-height:170%;
+}
+
 #sidebar {
     position: fixed;
     height:100%;
