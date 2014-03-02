@@ -47,6 +47,11 @@ html {
     padding-top:1em;
 }
 
+#footer { 
+    padding-bottom:5em;
+}
+
+
 #codeblock {
     font-family: 'Inconsolata';
 }
