@@ -8,38 +8,41 @@
     </div>
 
     <section id="main">
-    {{ .Content }}
+        {{ .Content }}
 
-    Written: {{ .Date.Format "Mon Jan 2, 2006" }}
+        Written: {{ .Date.Format "Mon Jan 2, 2006" }}
 
-    <br>
-    {{ .FuzzyWordCount }} Words
-
-    {{ if .Params.topics }}
-    <br>
-        Topics:
-        {{ range .Params.topics }}
-            {{ . }}
-        {{ end }}
-    {{ end }}
-
-    {{ if .Params.tags }}
         <br>
-        Tags: 
-        {{ range .Params.tags }}
-            {{ . }}
+        {{ .FuzzyWordCount }} Words
+
+        {{ if .Params.topics }}
+        <br>
+            Topics:
+            {{ range .Params.topics }}
+                {{ . }}
+            {{ end }}
         {{ end }}
-    {{ end }}
 
-    <br><br>
+        {{ if .Params.tags }}
+            <br>
+            Tags: 
+            {{ range .Params.tags }}
+                {{ . }}
+            {{ end }}
+        {{ end }}
 
-    {{ if .Prev }}
-    Prev: {{ .Prev.Title }}
-    {{ end }}
+        <br><br>
 
-    {{ if .Next }}
-    Next: {{ .Next.Title }}
-    {{ end }}
+        {{ if .Prev }}
+        Prev: <a href={{ .Prev.Permalink }}>{{ .Prev.Title }}</a>
+        {{ end }}
+
+        <br>
+
+        {{ if .Next }}
+        Next: <a href={{ .Next.Permalink }}>{{ .Next.Title }}</a>
+        
+        {{ end }}
 
     </section>
 </div>
